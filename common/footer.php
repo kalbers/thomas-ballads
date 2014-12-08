@@ -1,23 +1,37 @@
 </div><!-- end content -->
 
 <footer>
-
+<div id="footer-container">
+    
     <div id="footer-content" class="center-div">
+        
+        <div id="footer-logo">
+            <img src="<?php echo img('AAS-original-seal.png'); ?>" alt="AAS Logo"> 
+        </div>
         <?php if($footerText = get_theme_option('Footer Text')): ?>
         <div id="custom-footer-text">
             <p><?php echo get_theme_option('Footer Text'); ?></p>
         </div>
         <?php endif; ?>
+
+        <div id="footer-nav">
+            <ul>
+                <li><a href="#">Footer Link</a></li>
+                <li><a href="#">Footer Link</a></li>
+                <li><a href="#">Footer Link</a></li>
+                <li><a href="#">Footer Link</a></li>
+                <li><a href="#">Footer Link</a></li>
+            </ul>
+        </div>
+        
         <?php if ((get_theme_option('Display Footer Copyright') == 1) && $copyright = option('copyright')): ?>
         <p><?php echo $copyright; ?></p>
         <?php endif; ?>
-        <nav><?php echo public_nav_main()->setMaxDepth(0); ?></nav>
-        <p><?php echo __('Proudly powered by <a href="http://omeka.org">Omeka</a>.'); ?></p>
 
     </div><!-- end footer-content -->
 
      <?php fire_plugin_hook('public_footer', array('view'=>$this)); ?>
-
+</div><!-- end footer-container -->
 </footer>
 
 <script type="text/javascript">

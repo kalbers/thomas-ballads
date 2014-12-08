@@ -37,7 +37,9 @@
         <header>
             <?php fire_plugin_hook('public_header', array('view'=>$this)); ?>
             <div id="site-title">
-              <?php echo link_to_home_page(theme_logo()); ?>
+            <a href="#"><span></span></a>
+            
+              <?php echo option('site_title'); ?>
               <h4>Verses in Vogue with the Vulgar</h4>
             </div>
 
@@ -45,9 +47,8 @@
             <div id="aas-logo">
               <img src="<?php echo img('AAS-title-and-seal04.png'); ?>" alt="AAS Logo"> 
             </div>
-
-            
         </header>
+        <div class="lace-border"></div>
           <div id="nav">
             <div id="primary-nav">
                <?php 
@@ -80,8 +81,7 @@
              </div>
              
          </div>
-        
-        <?php echo theme_header_image(); ?>
+        <div class="lace-border"></div>
                        
     <div id="content">
 
