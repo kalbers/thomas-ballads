@@ -19,7 +19,8 @@
     </div>
 
     <div id="featured-essays">
-
+        <h3>Featured Essays</h3>
+        
     </div>
 
 

@@ -62,7 +62,7 @@ input[type=text], input[type=password], textarea {
         line-height: 1.7778 * $base-line-height;
     }
 
-    h4 { font-weight:bold; }
+    h4 { font-weight:normal; }
 
     h5 { font-style:italic; }
 
@@ -578,6 +578,11 @@ header h4 {
 
 }
 
+#featured-essays {
+    clear:both;
+    width: skeleton-column-width(12);
+}
+
 #recent-items .item {
     overflow:hidden;
     border-bottom:1px solid #ccc;
@@ -675,10 +680,10 @@ ul.title-list {
 
 .browse .item {
     clear: both;
-    border-bottom:1px solid #eee;
     padding: rhythm(2) 0;
     float: left;
     width: 100%;
+    background:url(../images/acorn-string-3.png) bottom center no-repeat;
 }
 
 #sort-links + .item { border-top: 1px solid #eee; }
@@ -768,21 +773,14 @@ ul.title-list {
 /* @group ----- Items/Browse ----- */
 
 .browse .item {
-    h2 {
-        @include columns(4);
-        @include alpha;
-        margin-bottom: 0;
-        max-width: 100%;
-    }
 
-    .item-meta .item-img {
-        @include columns(4);
-        @include omega;
-        float: right;
-        text-align: right;
+    .item-img {
+        @include columns(2);
+        @include alpha;
+        float: left;
         
         img { 
-            height: rhythm(7);
+            width:100%;
         }
     }
     
@@ -790,16 +788,13 @@ ul.title-list {
 }
 
 .browse .item-meta {
-    @include columns(12);
-    margin: 0;
+    @include columns(10);
+    @include omega;
+    float:right;
     
     p:first-of-type { margin-top: 0; }
 }
 
-.browse .item-meta > div {
-    @include columns(8);
-    margin: 0;
-}
 
 .browse .item-meta .item-description { 
     @include trailer(); 

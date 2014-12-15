@@ -37,7 +37,7 @@
         <header>
             <?php fire_plugin_hook('public_header', array('view'=>$this)); ?>
             <div id="site-title">
-            <a href="#"><span></span></a>
+            <a href="<?php echo public_url(''); ?>"><span></span></a>
             
               <?php echo option('site_title'); ?>
               <h4>Verses in Vogue with the Vulgar</h4>
