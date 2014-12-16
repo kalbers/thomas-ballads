@@ -54,7 +54,7 @@
                <?php 
                 $navArray = array();
                 $navArray[] = array('label' => 'Ballads', 'uri' => url('items'));
-                $navArray[] = array('label' => 'Essays', 'uri' => url('essays'));
+                $navArray[] = array('label' => 'Essays', 'uri' => url('table-of-contents'));
                 $navArray[] = array('label' => 'Subjects', 'uri' => url('subjects'));
                 $navArray[] = array('label' => 'About', 'uri' => url('about'));
                 ?>
