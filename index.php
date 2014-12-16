@@ -2,13 +2,12 @@
 
     
 
-    <?php if (get_theme_option('Display Featured Item') == 1): ?>
     <!-- Featured Item -->
         <div id="featured-item">
             <h3>Featured Ballad</h3>
             <?php echo random_featured_items(1); ?>
         </div><!--end featured-item-->
-    <?php endif; ?>
+
 
     <div id="about" class="panel">
         <h3>About</h3>
