@@ -143,12 +143,11 @@ header {
 
 #site-title {
     float:left;
-    width:skeleton-third-width(2);
+    width:skeleton-column-width(9);
     font-weight: normal;
     color:rgb(0,44,119);
-    font-size: 2.5 * $base-font-size;
+    font-size: 2.25 * $base-font-size;
     line-height:3 * $base-line-height;
-    margin:1rem 0 0;
     position:relative;
     
     img {
@@ -168,13 +167,12 @@ header {
     z-index: 1;
 }
 #aas-logo {
-    width:skeleton-third-width(1);
+    width:skeleton-column-width(3);
     float:right;
 }
 #aas-logo img {
     float:right;
-    margin-right:10px;
-    width:76%;
+    width:86%;
 }
 
 #aas-logo p {
