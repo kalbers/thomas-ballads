@@ -1,4 +1,6 @@
+<?php if($subjectRelations || $objectRelations): ?>
 <h4>Related Items</h4>
+<?php endif; ?>
 
 <?php foreach ($subjectRelations as $subjectRelation): ?>
         <div class="related-items">
