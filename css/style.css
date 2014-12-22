@@ -1243,11 +1243,7 @@ ul.title-list {
 }
 
 #item-images .item-file {
-  width: 210px;
-}
-
-#item-images .item-file img {
-  width: 100%;
+  width: 200px;
 }
 
 #item-citation {
@@ -1329,7 +1325,7 @@ ul.title-list {
 .related-items img {
   width: 100px;
   float: left;
-  margin-right: 10px;
+  margin-right: 5px;
 }
 
 /* Items Classes*/
