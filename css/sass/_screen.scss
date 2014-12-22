@@ -36,7 +36,6 @@ input[type=text], input[type=password], textarea {
 
     h1, h2, h3 {
         font-weight: normal;
-        color:#015581;
     }
 
     h1 {
@@ -47,14 +46,14 @@ input[type=text], input[type=password], textarea {
     }
 
     h2 {
-        font-size: 1.6875 * $base-font-size;
-        line-height: 1.6875 * $base-line-height;
+        font-size: 2.3125 * $base-font-size;
+        line-height: 2.3125 * $base-line-height;
     }
 
     h3 {
         font-size: 1.6875 * $base-font-size;
         line-height: $base-line-height;
-        color:rgb(190,58,52);
+        color:rgb(149,39,37);
     }
 
     h4, h5 {
@@ -335,7 +334,7 @@ header h4 {
     }
 
     button {
-        background:rgb(190,58,52);
+        background:rgb(149,39,37);
         color: white;
         position: absolute;
         border: 0;
@@ -379,7 +378,7 @@ header h4 {
         position: absolute;
         width: 100%;
         color: #fff;
-        background:rgb(190,58,52);
+        background:rgb(149,39,37);
         top: 0;
         bottom: 0;
         font-size: 14px;
@@ -564,6 +563,16 @@ header h4 {
     margin-bottom: 5px;
 }
 
+#home .item-image {
+    height:350px;
+    width:100%;
+    overflow:hidden;
+}
+
+#home .item-image {
+    width:100%;
+}
+
 #featured-metadata {
     clear:both;
     overflow:hidden;
@@ -651,10 +660,26 @@ ul.title-list {
     font-style:italic;
 }
 
+#item-metadata {
+    margin-top:20px;
+}
+
 #item-images {
-  overflow:hidden;
-  margin-bottom:18px;
-  margin-right:-10px;
+    overflow:hidden;
+    margin-bottom:18px;
+    margin-right:-10px;
+}
+
+#item-images .item-file {
+    width:210px;
+}
+
+#item-images .item-file img {
+    width:100%;
+}
+
+#item-citation {
+    padding-top:20px;
 }
 
 .fullsize {
@@ -669,6 +694,25 @@ ul.title-list {
         @include trailer(.5);
     }
 
+.items.show #primary {
+    @include columns(9);
+    @include alpha;
+    float:left;
+}
+
+.items.show #secondary {
+    @include columns(3);
+    @include omega;
+    float:right
+}
+
+.related-items {
+        img {
+        width:100px;
+        float:left;
+        margin-right:10px;
+    }
+}
 /* Items Classes*/
 .element {
     overflow:hidden;
@@ -689,7 +733,6 @@ ul.title-list {
 .item-pagination {
     clear:both;
     overflow:hidden;
-    border-top:1px solid #eee;
     padding-top:18px;
 }
     .item-pagination a {
@@ -702,6 +745,8 @@ ul.title-list {
         text-align:right;
     }
 
+
+
 .item .tags {
     clear:left;
     margin-left:216px;
@@ -709,7 +754,6 @@ ul.title-list {
 
 .item-file a {
     display: block;
-    height: rhythm(6);
     
     img {
         height: 100%;

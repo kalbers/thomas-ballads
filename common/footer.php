@@ -6,7 +6,7 @@
     <div id="footer-content" class="center-div">
         
         <div id="footer-logo">
-            <img src="<?php echo img('AAS-original-seal.png'); ?>" alt="AAS Logo"> 
+            <a href="http://www.americanantiquarian.org/"><img src="<?php echo img('AAS-original-seal.png'); ?>" alt="AAS Logo"></a> 
         </div>
         <?php if($footerText = get_theme_option('Footer Text')): ?>
         <div id="custom-footer-text">

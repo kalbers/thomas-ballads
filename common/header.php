@@ -6,6 +6,9 @@
     <?php if ($description = option('description')): ?>
     <meta name="description" content="<?php echo $description; ?>" />
     <?php endif; ?>
+    <link rel="icon" 
+      type="image/png" 
+      href="<?php echo img('favicon.png') ?>">
 
     <?php
     if (isset($title)) {
@@ -45,7 +48,7 @@
 
 
             <div id="aas-logo">
-              <img src="<?php echo img('AAS-title-and-seal04.png'); ?>" alt="AAS Logo"> 
+              <a href="http://www.americanantiquarian.org/"><img src="<?php echo img('AAS-title-and-seal04.png'); ?>" alt="AAS Logo"></a> 
             </div>
         </header>
         <div class="lace-border"></div>
