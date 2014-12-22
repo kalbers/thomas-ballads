@@ -1004,6 +1004,12 @@ ul.title-list {
 
 /* @end */
 
+/* Subject Page */
+#sb-subject-headings {
+    clear:both;
+    margin-top:10px;
+}
+
 /* @group ----- Search Results ----- */
 
 #search-results + .pagination { @include leader(1.5); }

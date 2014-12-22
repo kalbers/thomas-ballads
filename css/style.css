@@ -1735,6 +1735,12 @@ ul.title-list {
 }
 
 /* @end */
+/* Subject Page */
+#sb-subject-headings {
+  clear: both;
+  margin-top: 10px;
+}
+
 /* @group ----- Search Results ----- */
 #search-results + .pagination {
   margin-top: 1.6875em;
