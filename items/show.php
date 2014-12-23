@@ -4,11 +4,15 @@ queue_css_file('lightbox');
 ?>
 
 <?php echo head(array('title' => metadata('item', array('Dublin Core', 'Title')),'bodyclass' => 'items show')); ?>
+
+<div id="item-title">
+            <h1><?php echo metadata('item', array('Dublin Core','Title')); ?></h1>
+</div>
 <div id="primary">
 
-    <div class="main-metadata panel">
-        <h2><?php echo metadata('item', array('Dublin Core','Title')); ?></h2>
 
+
+    <div class="main-metadata">
         <?php echo metadata('item', array('Dublin Core', 'Description'), array('index' => 1)); ?>
     </div>
     
