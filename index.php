@@ -10,16 +10,10 @@
 
 
     <div id="about" class="panel">
-        <h3>About</h3>
         <img class="left" src="<?php echo img('tree.png'); ?>" alt="tree woodcut"> 
         <?php if ($homepageText = get_theme_option('Homepage Text')): ?>
-            <p><?php echo $homepageText; ?></p>
+            <?php echo $homepageText; ?>
         <?php endif; ?>
-    </div>
-
-    <div id="featured-essays">
-        <h3>Featured Essays</h3>
-        
     </div>
 
 

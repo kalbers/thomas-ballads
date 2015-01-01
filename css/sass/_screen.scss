@@ -39,9 +39,8 @@ input[type=text], input[type=password], textarea {
     }
 
     h1 {
-        font-size: 2.5 * $base-font-size;
+        font-size: 2 * $base-font-size;
         line-height: 2 * $base-line-height;
-        text-transform:uppercase;
         letter-spacing: .1em;
     }
 
@@ -53,7 +52,7 @@ input[type=text], input[type=password], textarea {
     h3 {
         font-size: 1.6875 * $base-font-size;
         line-height: $base-line-height;
-        color:rgb(149,39,37);
+        color:rgb(141,39,37);
     }
 
     h4, h5 {
@@ -334,7 +333,7 @@ header h4 {
     }
 
     button {
-        background:rgb(149,39,37);
+        background:rgb(141,39,37);
         color: white;
         position: absolute;
         border: 0;
@@ -378,7 +377,7 @@ header h4 {
         position: absolute;
         width: 100%;
         color: #fff;
-        background:rgb(149,39,37);
+        background:rgb(141,39,37);
         top: 0;
         bottom: 0;
         font-size: 14px;
@@ -403,6 +402,10 @@ header h4 {
     
     fieldset p {
         margin: 0;
+    }
+
+    a:link, a:hover, a:visited {
+        color:rgb(141,39,37);
     }
     
     & > *:last-child {
@@ -471,8 +474,12 @@ header h4 {
 }
 
 .panel {
+    //Blue
     background: rgba(0,44,119,0.05);
     border: 1px solid rgb(0,44,119);
+    // Brown
+    // background:rgba(199,192,162,0.5);
+    // border:2px solid rgba(199,192,162,1);
     padding:1.25rem;
 }
 
@@ -563,11 +570,11 @@ header h4 {
     margin-bottom: 5px;
 }
 
-#home .item-image {
-    height:350px;
-    width:100%;
-    overflow:hidden;
-}
+// #home .item-image {
+//     height:350px;
+//     width:100%;
+//     overflow:hidden;
+// }
 
 #home .item-image {
     width:100%;
@@ -682,8 +689,9 @@ ul.title-list {
   margin-right:10px;
 }
 
-#item-image img {
+#item-images img {
   width:100%;
+  border:solid 2px rgba(0,0,0,0.65);
   }
 
     .items.show h3 {
@@ -707,6 +715,8 @@ ul.title-list {
         width:100px;
         float:left;
         margin-right:5px;
+        margin-bottom:5px;
+        border:solid 2px rgba(0,0,0,0.65);
     }
 }
 /* Items Classes*/
@@ -1066,6 +1076,8 @@ footer {
     @include container;
     overflow:hidden;
     padding-top:30px;
+    font-size:13px;
+
 
     a { text-decoration:none; }
 
@@ -1104,18 +1116,15 @@ footer {
 }
 
 #footer-logo img {
-    width:100%
+    width:80%
 }
 
 #custom-footer-text {
     float:left;
     margin-left:1%;
-    width: skeleton-column-width(8);;
-}
+    width: skeleton-column-width(10);
+    padding-top:50px;
 
-#footer-nav {
-    width:skeleton-column-width(2);
-    float:left;
 }
 
 /* @end */

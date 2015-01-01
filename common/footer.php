@@ -13,16 +13,6 @@
             <p><?php echo get_theme_option('Footer Text'); ?></p>
         </div>
         <?php endif; ?>
-
-        <div id="footer-nav">
-            <ul>
-                <li><a href="#">Footer Link</a></li>
-                <li><a href="#">Footer Link</a></li>
-                <li><a href="#">Footer Link</a></li>
-                <li><a href="#">Footer Link</a></li>
-                <li><a href="#">Footer Link</a></li>
-            </ul>
-        </div>
         
         <?php if ((get_theme_option('Display Footer Copyright') == 1) && $copyright = option('copyright')): ?>
         <p><?php echo $copyright; ?></p>

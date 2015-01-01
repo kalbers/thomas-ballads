@@ -2,7 +2,7 @@
     <?php foreach ($items as $item): ?>
         <?php
         $title = metadata($item, array('Dublin Core', 'Title'));
-        $description = metadata($item, array('Dublin Core', 'Description'), array('snippet' => 150));
+        $description = metadata($item, array('Dublin Core', 'Description'),, array('index' => 1), array('snippet' => 15));
         ?>
         <?php if (metadata($item, 'has thumbnail')) {
             echo link_to_item(
@@ -11,7 +11,7 @@
             );
         }
         ?>
-        <h3><?php echo link_to($item, 'show', strip_formatting($title)); ?></h3>
+        <h3><?php echo link_to($item, 'show', strip_formatting($title)); ?>test</h3>
         <?php if ($description): ?>
             <p class="item-description"><?php echo $description; ?></p>
         <?php endif; ?>

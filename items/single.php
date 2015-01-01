@@ -1,7 +1,7 @@
 <div class="item record">
     <?php
     $title = metadata($item, array('Dublin Core', 'Title'));
-    $description = metadata($item, array('Dublin Core', 'Description'), array('snippet' => 300));
+    $description = metadata($item, array('Dublin Core', 'Description'), array('index' => 1, 'snippet' => 300));
     ?>
     <div class="item-image">
     <?php if (metadata($item, 'has files')) {

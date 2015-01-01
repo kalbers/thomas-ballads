@@ -408,9 +408,8 @@ h1, h2, h3 {
 }
 
 h1 {
-  font-size: 40px;
+  font-size: 32px;
   line-height: 36px;
-  text-transform: uppercase;
   letter-spacing: .1em;
 }
 
@@ -422,7 +421,7 @@ h2 {
 h3 {
   font-size: 27px;
   line-height: 18px;
-  color: #952725;
+  color: #8d2725;
 }
 
 h4, h5 {
@@ -810,7 +809,7 @@ header h4 {
   box-sizing: border-box;
 }
 #search-container button {
-  background: #952725;
+  background: #8d2725;
   color: white;
   position: absolute;
   border: 0;
@@ -854,7 +853,7 @@ header h4 {
   position: absolute;
   width: 100%;
   color: #fff;
-  background: #952725;
+  background: #8d2725;
   top: 0;
   bottom: 0;
   font-size: 14px;
@@ -880,6 +879,9 @@ header h4 {
 }
 #advanced-form fieldset p {
   margin: 0;
+}
+#advanced-form a:link, #advanced-form a:hover, #advanced-form a:visited {
+  color: #8d2725;
 }
 #advanced-form > *:last-child {
   margin-bottom: 0em;
@@ -1110,12 +1112,6 @@ header h4 {
 }
 
 #home .item-image {
-  height: 350px;
-  width: 100%;
-  overflow: hidden;
-}
-
-#home .item-image {
   width: 100%;
 }
 
@@ -1254,8 +1250,9 @@ ul.title-list {
   margin-right: 10px;
 }
 
-#item-image img {
+#item-images img {
   width: 100%;
+  border: solid 2px rgba(0, 0, 0, 0.65);
 }
 
 .items.show h3 {
@@ -1326,6 +1323,8 @@ ul.title-list {
   width: 100px;
   float: left;
   margin-right: 5px;
+  margin-bottom: 5px;
+  border: solid 2px rgba(0, 0, 0, 0.65);
 }
 
 /* Items Classes*/
@@ -1799,6 +1798,7 @@ footer {
   width: 960px;
   overflow: hidden;
   padding-top: 30px;
+  font-size: 13px;
 }
 #footer-container:after {
   content: "\0020";
@@ -1855,18 +1855,14 @@ footer {
 }
 
 #footer-logo img {
-  width: 100%;
+  width: 80%;
 }
 
 #custom-footer-text {
   float: left;
   margin-left: 1%;
-  width: 620px;
-}
-
-#footer-nav {
-  width: 140px;
-  float: left;
+  width: 780px;
+  padding-top: 50px;
 }
 
 /* @end */
