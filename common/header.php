@@ -56,7 +56,7 @@
             <div id="primary-nav">
                <?php 
                 $navArray = array();
-                $navArray[] = array('label' => 'Ballads', 'uri' => url('items'));
+                $navArray[] = array('label' => 'Ballads', 'uri' => url('items/browse/tag/ballad'));
                 $navArray[] = array('label' => 'Essays', 'uri' => url('essays'));
                 $navArray[] = array('label' => 'Subjects', 'uri' => url('subjects'));
                 $navArray[] = array('label' => 'About', 'uri' => url('about'));
