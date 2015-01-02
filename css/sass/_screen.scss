@@ -28,7 +28,7 @@ input[type=text], input[type=password], textarea {
 
     h1, h2, h3, h4, h5, h6 { margin-bottom: $base-line-height; }
 
-    h1, h2, h3, h4, #site-title {
+    h1, h2, h3, h4, #site-title, .flourish {
         font-family: 'IM Fell Great Primer SC', Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
         margin-top: 0.2rem;
         margin-bottom: 0.5rem;
@@ -596,6 +596,11 @@ header h4 {
 
 }
 
+.flourish {
+    font-size:2.5 * $base-font-size;
+    line-height:2.5 * $base-font-size;
+}
+
 #featured-essays {
     clear:both;
     width: skeleton-column-width(12);
@@ -869,7 +874,10 @@ ul.title-list {
     }
 }
 
-#outputs { clear: both; }
+#outputs { 
+    clear: both;
+    padding:25px 0;
+     }
 
 .item-img a {
     display: block;

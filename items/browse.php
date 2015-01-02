@@ -14,6 +14,8 @@ echo head(array('title'=>$pageTitle,'bodyclass' => 'items browse'));
 
 <?php
 $sortLinks[__('Title')] = 'Dublin Core,Title';
+$sortLinks[__('Date')] = 'Dublin Core,Date';
+$sortLinks[__('Publisher')] = 'Dublin Core,Publisher';
 ?>
 <div id="sort-links">
     <span class="sort-label"><?php echo __('Sort by: '); ?></span><?php echo browse_sort_links($sortLinks); ?>
@@ -50,7 +52,7 @@ $sortLinks[__('Title')] = 'Dublin Core,Title';
 <?php echo pagination_links(); ?>
 
 <div id="outputs">
-    <span class="outputs-label"><?php echo __('Output Formats'); ?></span>
+    <span class="outputs-label"><?php echo __('These results in machine readable formats:'); ?></span>
     <?php echo output_format_list(false); ?>
 </div>
 

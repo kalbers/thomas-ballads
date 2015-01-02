@@ -397,7 +397,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 18px;
 }
 
-h1, h2, h3, h4, #site-title {
+h1, h2, h3, h4, #site-title, .flourish {
   font-family: 'IM Fell Great Primer SC', Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
   margin-top: 0.2rem;
   margin-bottom: 0.5rem;
@@ -1129,6 +1129,11 @@ header h4 {
   color: #8d2725;
 }
 
+.flourish {
+  font-size: 40px;
+  line-height: 40px;
+}
+
 #featured-essays {
   clear: both;
   width: 940px;
@@ -1530,6 +1535,7 @@ ul.title-list {
 
 #outputs {
   clear: both;
+  padding: 25px 0;
 }
 
 .item-img a {

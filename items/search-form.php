@@ -90,17 +90,6 @@ $formAttributes['method'] = 'GET';
         <button type="button" class="add_search"><?php echo __('Add a Field'); ?></button>
     </div>
 
-    <div id="search-by-range" class="field">
-        <?php echo $this->formLabel('range', __('Search by a range of ID#s (example: 1-4, 156, 79)')); ?>
-        <div class="inputs">
-        <?php
-            echo $this->formText('range', @$_GET['range'],
-                array('size' => '40')
-            );
-        ?>
-        </div>
-    </div>
-
 
 
 
