@@ -38,7 +38,15 @@ queue_css_file('lightbox');
     <div id="item-images">
         <h4>Ballad</h4>
         <?php echo files_for_item(array('linkToFile' => 'fullsize','linkAttributes' => array('data-lightbox'=>'lightbox',),'imageSize' => 'thumbnail')); ?>
-        <a href="#" target="_blank">View Original</a>
+        <?php
+            set_loop_records('files', get_current_record('item')->Files);
+            foreach(loop('files') as $file){
+                $GigiID = metadata('file', 'display title');
+                $strGigiID = substr($GigiID, 0, 6);
+                } ?>
+
+        
+        <a href="http://gigi.mwa.org/netpub/server.np?quickfind=<?php echo $strGigiID; ?>&sorton=filename&catalog=catalog&site=public&template=results.np" target="_blank">View Original</a>
     </div>
     <?php endif; ?>
     
