@@ -5,9 +5,6 @@ echo head(array('title'=>$pageTitle,'bodyclass' => 'items browse'));
 
 <h1><?php echo $pageTitle;?> <?php echo __('(%s total)', $total_results); ?></h1>
 
-<nav class="items-nav navigation secondary-nav">
-    <?php echo public_nav_items(); ?>
-</nav>
 
 <?php echo item_search_filters(); ?>
 
@@ -41,12 +38,6 @@ $sortLinks[__('Title')] = 'Dublin Core,Title';
     <?php if ($description = metadata('item', array('Dublin Core', 'Description'), array('snippet'=>250))): ?>
     <div class="item-description">
         <?php echo $description; ?>
-    </div>
-    <?php endif; ?>
-
-    <?php if (metadata('item', 'has tags')): ?>
-    <div class="tags"><p><strong><?php echo __('Tags'); ?>:</strong>
-        <?php echo tag_string('items'); ?></p>
     </div>
     <?php endif; ?>
 

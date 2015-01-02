@@ -9,13 +9,18 @@ queue_css_file('lightbox');
             <h1><?php echo metadata('item', array('Dublin Core','Title')); ?></h1>
 </div>
 <div id="primary">
-
+    <?php if(!$item->hasTag('Ballad')): ?>
+    <div id="item-images">
+        <?php echo item_image('fullsize'); ?>
+    </div>
+    <?php endif; ?>
 
 
     <div class="main-metadata">
         <?php echo metadata('item', array('Dublin Core', 'Description'), array('index' => 1)); ?>
     </div>
-    
+
+
 
     <!-- Items metadata -->
     <div id="item-metadata" class="panel">
@@ -29,12 +34,13 @@ queue_css_file('lightbox');
 </div> <!-- End of Primary. -->
 
 <div id="secondary">
-    
+    <?php if($item->hasTag('Ballad')): ?>
     <div id="item-images">
         <h4>Ballad</h4>
         <?php echo files_for_item(array('linkToFile' => 'fullsize','linkAttributes' => array('data-lightbox'=>'lightbox',),'imageSize' => 'thumbnail')); ?>
         <a href="#" target="_blank">View Original</a>
     </div>
+    <?php endif; ?>
     
     
 
