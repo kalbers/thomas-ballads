@@ -1125,6 +1125,9 @@ header h4 {
   width: 300px;
   float: right;
 }
+#home #about a:link, #home #about a:hover, #home #about a:visited {
+  color: #8d2725;
+}
 
 #featured-essays {
   clear: both;

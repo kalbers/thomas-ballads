@@ -590,6 +590,10 @@ header h4 {
     width:skeleton-column-width(4);
     float:right;
 
+    a:link, a:hover, a:visited {
+        color:rgb(141,39,37);
+    }
+
 }
 
 #featured-essays {
