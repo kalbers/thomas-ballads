@@ -41,6 +41,9 @@ $sortLinks[__('Publisher')] = 'Dublin Core,Publisher';
     <div class="item-description">
         <?php echo $description; ?>
     </div>
+
+    <p><span class="bold">Date:</span><?php echo metadata('item', array('Dublin Core', 'Date')); ?></p>
+    <p><span class="bold">Publisher:</span><?php echo metadata('item', array('Dublin Core', 'Publisher')); ?></p>
     <?php endif; ?>
 
     <?php fire_plugin_hook('public_items_browse_each', array('view' => $this, 'item' =>$item)); ?>
