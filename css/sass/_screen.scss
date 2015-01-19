@@ -79,7 +79,7 @@ input[type=text], input[type=password], textarea {
     /* -- Misc Inline elements -- */
     em, i { font-style:italic; }
 
-    strong, b { font-weight:bold; }
+    strong, b, .bold { font-weight:bold; }
 
     abbr, acronym {
         border:none;
@@ -849,7 +849,8 @@ ul.title-list {
     @include omega;
     float:right;
     
-    p:first-of-type { margin-top: 0; }
+    p:{ margin: 0; }
+    p:{margin-top:5px}
 }
 
 

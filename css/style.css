@@ -463,7 +463,7 @@ em, i {
   font-style: italic;
 }
 
-strong, b {
+strong, b, .bold {
   font-weight: bold;
 }
 
@@ -1487,6 +1487,8 @@ ul.title-list {
   width: 780px;
   margin-right: 0;
   float: right;
+  p-margin: 0;
+  p-margin-top: 5px;
 }
 @media only screen and (max-width: 767px) {
   .browse .item-meta {
@@ -1507,9 +1509,6 @@ ul.title-list {
   .browse .item-meta {
     width: 420px;
   }
-}
-.browse .item-meta p:first-of-type {
-  margin-top: 0;
 }
 
 .browse .item-meta .item-description {
