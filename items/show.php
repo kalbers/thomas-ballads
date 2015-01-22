@@ -46,7 +46,7 @@ queue_css_file('lightbox');
                 $strGigiID = substr($GigiID, 0, 6);
                 ?>
                 <div class="item-file">
-                    <a href="<?php echo file_display_url($file); ?>" data-lightbox="lightbox" data-title="<a href='http://gigi.mwa.org/netpub/server.np?quickfind=<?php echo $strGigiID; ?>&sorton=filename&catalog=catalog&site=public&template=results.np' target='_blank'>View Original&rarr;</a>"><?php echo file_image('thumbnail', array('class' => 'thumbnail'), $file); ?></a>
+                    <a href="<?php echo file_display_url($file); ?>" data-lightbox="lightbox" data-title="<a target='_blank' href='http://gigi.mwa.org/netpub/server.np?quickfind=<?php echo $strGigiID; ?>&sorton=filename&catalog=catalog&site=public&template=results.np'>View Original&rarr;</a>"><?php echo file_image('thumbnail', array('class' => 'thumbnail'), $file); ?></a>
                 </div>
 
 
