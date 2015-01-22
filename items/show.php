@@ -37,7 +37,6 @@ queue_css_file('lightbox');
     <?php if($item->hasTag('Ballad')): ?>
     <div id="item-images">
         <h4>Ballad</h4>
-        <?php echo files_for_item(array('linkToFile' => 'fullsize','linkAttributes' => array('data-lightbox'=>'lightbox'),'imageSize' => 'thumbnail')); ?>
         <?php
             set_loop_records('files', get_current_record('item')->Files);
             foreach(loop('files') as $file): ?>
@@ -51,7 +50,7 @@ queue_css_file('lightbox');
 
 
 
-        <a href="http://gigi.mwa.org/netpub/server.np?quickfind=<?php echo $strGigiID; ?>&sorton=filename&catalog=catalog&site=public&template=results.np" target="_blank">View Original</a>
+        <a href="http://gigi.mwa.org/netpub/server.np?quickfind=<?php echo $strGigiID; ?>&site=public&catalog=catalog&sorton=filename&template=detail.np&offset=0&TabletNPResults=/netpub/server.np%3Fquickfind%3D203762%26site%3Dpublic%26catalog%3Dcatalog%26sorton%3Dfilename%26template%3Dresults.np&TabletNPResultsCount=1&playMode=stop" target="_blank">View Original</a>
    
                     <?php endforeach; ?>
     </div>
