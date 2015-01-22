@@ -1279,6 +1279,7 @@ ul.title-list {
   width: 700px;
   margin-left: 0;
   float: left;
+  padding-top: 5px;
 }
 @media only screen and (max-width: 767px) {
   .items.show #primary {

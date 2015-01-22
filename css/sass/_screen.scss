@@ -715,6 +715,7 @@ ul.title-list {
     @include columns(9);
     @include alpha;
     float:left;
+    padding-top:5px;
 }
 
 .items.show #secondary {
