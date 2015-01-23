@@ -90,12 +90,12 @@ queue_css_file('lightbox');
                 $strGigiID = substr($GigiID, 0, 6);
                 ?>
                 <div class="item-file">
-                    <a href="<?php echo file_display_url($file); ?>" data-lightbox="lightbox" data-title="<a target='_blank' href='http://gigi.mwa.org/netpub/server.np?quickfind=<?php echo $strGigiID; ?>&site=public&catalog=catalog&sorton=filename&template=detail.np&offset=0&TabletNPResults=/netpub/server.np%3Fquickfind%3D203762%26site%3Dpublic%26catalog%3Dcatalog%26sorton%3Dfilename%26template%3Dresults.np&TabletNPResultsCount=1&playMode=stop'>View Original&rarr;</a>"><?php echo file_image('thumbnail', array('class' => 'thumbnail'), $file); ?></a>
+                    <a href="<?php echo file_display_url($file); ?>" data-lightbox="lightbox" data-title="<a target='_blank' href='http://gigi.mwa.org/netpub/server.np?quickfind=<?php echo $strGigiID; ?>&site=public&catalog=catalog&sorton=filename&template=detail.np&offset=0&TabletNPResults=/netpub/server.np%3Fquickfind%3D203762%26site%3Dpublic%26catalog%3Dcatalog%26sorton%3Dfilename%26template%3Dresults.np&TabletNPResultsCount=1&playMode=stop'>View High Resolution Image&rarr;</a>"><?php echo file_image('thumbnail', array('class' => 'thumbnail'), $file); ?></a>
                 </div>
 
 
 
-        <a href="http://gigi.mwa.org/netpub/server.np?quickfind=<?php echo $strGigiID; ?>&site=public&catalog=catalog&sorton=filename&template=detail.np&offset=0&TabletNPResults=/netpub/server.np%3Fquickfind%3D203762%26site%3Dpublic%26catalog%3Dcatalog%26sorton%3Dfilename%26template%3Dresults.np&TabletNPResultsCount=1&playMode=stop" target="_blank">View Original</a>
+        <a href="http://gigi.mwa.org/netpub/server.np?quickfind=<?php echo $strGigiID; ?>&site=public&catalog=catalog&sorton=filename&template=detail.np&offset=0&TabletNPResults=/netpub/server.np%3Fquickfind%3D203762%26site%3Dpublic%26catalog%3Dcatalog%26sorton%3Dfilename%26template%3Dresults.np&TabletNPResultsCount=1&playMode=stop" target="_blank">View High Resolution Image&rarr;</a>
    
                     <?php endforeach; ?>
     </div>
