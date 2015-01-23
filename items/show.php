@@ -37,15 +37,15 @@ queue_css_file('lightbox');
             <?php echo metadata('item', array('Dublin Core', 'Date'), array('delimiter' => '<br/>')); ?>
         <?php endif; ?>
 
-        <?php if (metadata('item', array('Dublin Core', 'Publisher'))): ?>
-            <h4>Publisher</h4>
-            <?php echo metadata('item', array('Dublin Core', 'Publisher'), array('delimiter' => '<br/>')); ?>
-        <?php endif; ?>
-
         <?php if (metadata('item', array('Dublin Core', 'Spatial Coverage'))): ?>
             <h4>Place of Publication</h4>
             <?php echo metadata('item', array('Dublin Core', 'Spatial Coverage'), array('delimiter' => '<br/>')); ?>
         <?php endif; ?>
+
+        <?php if (metadata('item', array('Dublin Core', 'Publisher'))): ?>
+            <h4>Publisher</h4>
+            <?php echo metadata('item', array('Dublin Core', 'Publisher'), array('delimiter' => '<br/>')); ?>
+        <?php endif; ?>       
 
         <?php if (metadata('item', array('Dublin Core', 'Subject'))): ?>
             <h4>Subjects</h4>
