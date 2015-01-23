@@ -25,7 +25,44 @@ queue_css_file('lightbox');
     <!-- Items metadata -->
     <div id="item-metadata" class="panel">
         <h3>Additional Metadata</h3>
-        <?php echo all_element_texts('item'); ?>
+
+        <?php if (metadata('item', array('Dublin Core', 'Date'))): ?>
+            <h4>Date</h4>
+            <?php echo metadata('item', array('Dublin Core', 'Date'), array('delimiter' => '<br/>')); ?>
+        <?php endif; ?>
+
+        <?php if (metadata('item', array('Dublin Core', 'Publisher'))): ?>
+            <h4>Publisher</h4>
+            <?php echo metadata('item', array('Dublin Core', 'Publisher'), array('delimiter' => '<br/>')); ?>
+        <?php endif; ?>
+
+        <?php if (metadata('item', array('Dublin Core', 'Spatial Coverage'))): ?>
+            <h4>Place of Publication</h4>
+            <?php echo metadata('item', array('Dublin Core', 'Spatial Coverage'), array('delimiter' => '<br/>')); ?>
+        <?php endif; ?>
+
+        <?php if (metadata('item', array('Dublin Core', 'Subject'))): ?>
+            <h4>Subjects</h4>
+            <?php echo metadata('item', array('Dublin Core', 'Subject'), array('delimiter' => '<br/>')); ?>
+        <?php endif; ?>
+
+        <?php if (metadata('item', array('Dublin Core', 'Alternative Title'))): ?>
+            <h4>First Line</h4>
+            <?php echo metadata('item', array('Dublin Core', 'Alternative Title'), array('delimiter' => '<br/>')); ?>
+        <?php endif; ?>
+
+        <?php if (metadata('item', array('Dublin Core', 'Identifier'))): ?>
+            <h4>Identifiers</h4>
+            <?php echo metadata('item', array('Dublin Core', 'Identifier'), array('delimiter' => '<br/>')); ?>
+        <?php endif; ?>
+
+        <?php if (metadata('item', array('Item Type Metadata', 'Physical Dimensions'))): ?>
+            <h4>Physical Dimensions</h4>
+            <?php echo metadata('item', array('Item Type Metadata', 'Physical Dimensions'), array('delimiter' => '<br/>')); ?>
+        <?php endif; ?>
+
+        <!-- <h3>Additional Metadata</h3> -->
+        <?php// echo all_element_texts('item'); ?>
     </div>
 
 

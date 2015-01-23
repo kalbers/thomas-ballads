@@ -1271,6 +1271,10 @@ ul.title-list {
   margin-bottom: 0.5625em;
 }
 
+.items.show h4 {
+  margin: 10px 0 2px;
+}
+
 .items.show #primary {
   float: left;
   display: inline;

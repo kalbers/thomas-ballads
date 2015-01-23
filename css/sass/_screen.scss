@@ -707,9 +707,13 @@ ul.title-list {
   border:solid 2px rgba(0,0,0,0.65);
   }
 
-    .items.show h3 {
-        @include trailer(.5);
-    }
+.items.show h3 {
+    @include trailer(.5);
+}
+
+.items.show h4 {
+    margin: 10px 0 2px
+}
 
 .items.show #primary {
     @include columns(9);
