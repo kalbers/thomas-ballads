@@ -60,6 +60,11 @@ queue_css_file('lightbox');
             <h4>Physical Dimensions</h4>
             <?php echo metadata('item', array('Item Type Metadata', 'Physical Dimensions'), array('delimiter' => '<br/>')); ?>
         <?php endif; ?>
+
+        <?php if (metadata('item', array('Dublin Core', 'Source'))): ?>
+            <h4>Source</h4>
+            <?php echo metadata('item', array('Dublin Core', 'Source'), array('delimiter' => '<br/>')); ?>
+        <?php endif; ?>
     </div>
 
 
