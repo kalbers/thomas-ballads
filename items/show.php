@@ -1,4 +1,4 @@
-<?php 
+ <?php 
 queue_js_file('lightbox.min', 'javascripts/vendor');
 queue_css_file('lightbox');
 ?>
@@ -20,8 +20,14 @@ queue_css_file('lightbox');
         <?php echo metadata('item', array('Dublin Core', 'Description'), array('index' => 1)); ?>
     </div>
 
+    <?php if(!$item->hasTag('Ballad')): ?>
+        <div id="item-metadata" class="panel">
+            <h3>Additional Metadata</h3>
+            <?php echo all_element_texts('item'); ?>
+        </div>
+    <?php endif; ?>
 
-
+    <?php if($item->hasTag('Ballad')): ?>
     <!-- Items metadata -->
     <div id="item-metadata" class="panel">
         <h3>Additional Metadata</h3>
@@ -66,7 +72,7 @@ queue_css_file('lightbox');
             <?php echo metadata('item', array('Dublin Core', 'Source'), array('delimiter' => '<br/>')); ?>
         <?php endif; ?>
     </div>
-
+    <?php endif; ?>
 
 
 
