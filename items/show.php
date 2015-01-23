@@ -60,9 +60,6 @@ queue_css_file('lightbox');
             <h4>Physical Dimensions</h4>
             <?php echo metadata('item', array('Item Type Metadata', 'Physical Dimensions'), array('delimiter' => '<br/>')); ?>
         <?php endif; ?>
-
-        <!-- <h3>Additional Metadata</h3> -->
-        <?php// echo all_element_texts('item'); ?>
     </div>
 
 
