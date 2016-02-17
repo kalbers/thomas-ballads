@@ -68,8 +68,17 @@ queue_css_file('lightbox');
         <?php endif; ?>
 
         <?php if (metadata('item', array('Dublin Core', 'Source'))): ?>
-            <h4>Source</h4>
+            <h4>Transcriptions</h4>
             <?php echo metadata('item', array('Dublin Core', 'Source'), array('delimiter' => '<br/>')); ?>
+            <br/>
+            <?php
+            set_loop_records('files', get_current_record('item')->Files);
+            foreach(loop('files') as $file): ?>
+                <?php $fileExtension = $file->getExtension(); ?>
+                <?php if($fileExtension == 'xml'): ?>
+                    <a href="<?php echo file_display_url($file, $format = 'original'); ?>" download>Download TEI XML</a>
+                <?php endif; ?>
+            <?php endforeach; ?>
         <?php endif; ?>
     </div>
     <?php endif; ?>
@@ -85,19 +94,16 @@ queue_css_file('lightbox');
         <?php
             set_loop_records('files', get_current_record('item')->Files);
             foreach(loop('files') as $file): ?>
-
-                <?php $GigiID = metadata('file', 'display title');
-                $strGigiID = substr($GigiID, 0, 6);
-                ?>
-                <div class="item-file">
-                    <a href="<?php echo file_display_url($file); ?>" data-lightbox="lightbox" data-title="<a target='_blank' href='http://gigi.mwa.org/netpub/server.np?quickfind=<?php echo $strGigiID; ?>&site=public&catalog=catalog&sorton=filename&template=detail.np&offset=0&TabletNPResults=/netpub/server.np%3Fquickfind%3D203762%26site%3Dpublic%26catalog%3Dcatalog%26sorton%3Dfilename%26template%3Dresults.np&TabletNPResultsCount=1&playMode=stop'>View High Resolution Image&rarr;</a>"><?php echo file_image('thumbnail', array('class' => 'thumbnail'), $file); ?></a>
-                </div>
-
-
-
-        <a href="http://gigi.mwa.org/netpub/server.np?quickfind=<?php echo $strGigiID; ?>&site=public&catalog=catalog&sorton=filename&template=detail.np&offset=0&TabletNPResults=/netpub/server.np%3Fquickfind%3D203762%26site%3Dpublic%26catalog%3Dcatalog%26sorton%3Dfilename%26template%3Dresults.np&TabletNPResultsCount=1&playMode=stop" target="_blank">View High Resolution Image&rarr;</a>
-   
-                    <?php endforeach; ?>
+                <?php if($file->hasThumbnail()): ?>
+                    <?php $GigiID = metadata('file', 'display title');
+                    $strGigiID = substr($GigiID, 0, 6);
+                    ?>
+                    <div class="item-file">
+                        <a href="<?php echo file_display_url($file); ?>" data-lightbox="lightbox" data-title="<a target='_blank' href='http://gigi.mwa.org/netpub/server.np?quickfind=<?php echo $strGigiID; ?>&site=public&catalog=catalog&sorton=filename&template=detail.np&offset=0&TabletNPResults=/netpub/server.np%3Fquickfind%3D203762%26site%3Dpublic%26catalog%3Dcatalog%26sorton%3Dfilename%26template%3Dresults.np&TabletNPResultsCount=1&playMode=stop'>View High Resolution Image&rarr;</a>"><?php echo file_image('thumbnail', array('class' => 'thumbnail'), $file); ?></a>
+                    </div>
+                    <a href="http://gigi.mwa.org/netpub/server.np?quickfind=<?php echo $strGigiID; ?>&site=public&catalog=catalog&sorton=filename&template=detail.np&offset=0&TabletNPResults=/netpub/server.np%3Fquickfind%3D203762%26site%3Dpublic%26catalog%3Dcatalog%26sorton%3Dfilename%26template%3Dresults.np&TabletNPResultsCount=1&playMode=stop" target="_blank">View High Resolution Image&rarr;</a>
+                <?php endif; ?>
+            <?php endforeach; ?>
     </div>
     <?php endif; ?>
     
