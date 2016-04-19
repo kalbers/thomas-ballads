@@ -20,6 +20,15 @@ queue_css_file('lightbox');
         <?php echo metadata('item', array('Dublin Core', 'Description'), array('index' => 1)); ?>
     </div>
 
+    <?php
+        set_loop_records('files', get_current_record('item')->Files);
+        foreach(loop('files') as $file): ?>
+            <?php $fileExtension = $file->getExtension(); ?>
+            <?php if($fileExtension == 'mp3'): ?>
+                <p>Listen to the ballad here: </p><?php echo file_markup($file); ?>
+            <?php endif; ?>
+        <?php endforeach; ?>
+
     <?php if(!$item->hasTag('Ballad')): ?>
         <div id="item-metadata" class="panel">
             <h3>Additional Metadata</h3>
