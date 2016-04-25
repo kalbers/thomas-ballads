@@ -20,7 +20,7 @@ queue_css_file('lightbox');
         foreach(loop('files') as $file): ?>
             <?php $fileExtension = $file->getExtension(); ?>
             <?php if($fileExtension == 'mp3'): ?>
-                <p>Listen to the ballad here: </p><?php echo file_markup($file); ?>
+                <p><?php echo metadata($file,  array('Dublin Core', 'Description')); ?></p><?php echo file_markup($file); ?>
             <?php endif; ?>
         <?php endforeach; ?>
 
