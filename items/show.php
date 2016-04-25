@@ -15,11 +15,6 @@ queue_css_file('lightbox');
     </div>
     <?php endif; ?>
 
-
-    <div class="main-metadata">
-        <?php echo metadata('item', array('Dublin Core', 'Description'), array('index' => 1)); ?>
-    </div>
-
     <?php
         set_loop_records('files', get_current_record('item')->Files);
         foreach(loop('files') as $file): ?>
@@ -28,6 +23,10 @@ queue_css_file('lightbox');
                 <p>Listen to the ballad here: </p><?php echo file_markup($file); ?>
             <?php endif; ?>
         <?php endforeach; ?>
+
+    <div class="main-metadata">
+        <?php echo metadata('item', array('Dublin Core', 'Description'), array('index' => 1)); ?>
+    </div>
 
     <?php if(!$item->hasTag('Ballad')): ?>
         <div id="item-metadata" class="panel">
